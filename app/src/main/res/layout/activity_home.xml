@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
-    android:background="#efefef"
-    android:padding="12dp">
+    android:background="@color/background_color"
+    android:padding="@dimen/small_padding">
 
     <TextView
         android:id="@+id/image_hero"
@@ -20,120 +20,220 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/global_textview"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="37dp"
-        android:text="Global update"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/small_margin"
+        android:paddingTop="@dimen/normal_padding"
+        android:text="@string/global_update"
         android:textColor="@color/black"
         android:textSize="20sp"
-       android:paddingTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_hero" />
 
-
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/lastUpdet_textview"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:paddingTop="10dp"
-        android:text="Last updated: August 13,2021  "
+        android:paddingTop="@dimen/small_padding"
+        android:text="@string/last_updated"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="419dp" />
+        app:layout_constraintTop_toBottomOf="@+id/confirm_cardview" />
 
-    <TextView
-        android:id="@+id/image_hero4"
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/confirm_cardview"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:text="@string/_8k"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/global_textview">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/confirmed_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/confirmed"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/image_hero" />
+
+            <TextView
+                android:id="@+id/confirmedNumber_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/_895"
+                android:textColor="@color/blue"
+                android:textSize="35sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recover_cardview"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:text="@string/_8k"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toEndOf="@+id/confirm_cardview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/confirm_cardview">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/recover_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/recover"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/image_hero" />
+
+            <TextView
+                android:id="@+id/recoverNumber_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/_178"
+
+                android:textColor="@color/green"
+                android:textSize="35sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:text="@string/_8k"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/recover_cardview"
+        app:layout_constraintEnd_toEndOf="@+id/global_textview"
+        app:layout_constraintTop_toBottomOf="@+id/global_textview">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/deaths_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/deaths"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/image_hero" />
+
+            <TextView
+                android:id="@+id/deathsNumber_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/_8k"
+                android:textColor="@color/pink"
+                android:textSize="35sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:scaleType="fitCenter"
-        android:elevation="30dp"
-        android:background="@drawable/card_shape"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/lastUpdet_textview"
+        app:layout_constraintStart_toStartOf="@+id/lastUpdet_textview"
+        app:layout_constraintTop_toBottomOf="@+id/lastUpdet_textview">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/protection_info"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/card_shape"
+                android:elevation="30dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastUpdet_textview" />
+
+
+
+
+            <androidx.cardview.widget.CardView
+                 android:id="@+id/cure_info"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/card_shape"
+                android:elevation="30dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastUpdet_textview" />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="Global update"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_hero" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="Recover"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        tools:layout_editor_absoluteX="258dp"
-        tools:layout_editor_absoluteY="242dp" />
-x
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="Confirmed"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="262dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:background="@drawable/card_shape"
-        android:elevation="30dp"
-        android:gravity="center"
-        android:text="178K+"
-        android:textColor="#0DD345"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOsf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:background="@drawable/card_shape"
-        android:elevation="20dp"
-        android:gravity="center"
-        android:text="895K+"
-        android:textColor="#0E95F6"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:background="@drawable/card_shape"
-        android:elevation="30dp"
-        android:gravity="center"
-        android:text="8K+"
-        android:textColor="#f8477f"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:background="@color/purple_200"
+        app:menu="@menu/main_button_nav"
+        app:labelVisibilityMode="unlabeled"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
